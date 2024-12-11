@@ -1,0 +1,20 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightsalmon;
+        position: relative;              // make the section be continuous
+        top: 70px;                       // starts at position 70px from top
+        scroll-behavior: smooth;         // determines how the scroll animation will look
+        scroll-snap-type: y mandatory;   // the containers must snap strictly based on vertical position
+        scrollbar-width: none;
+
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;    // the snap is aligned based on its start position
+        }
+    }
+}
